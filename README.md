@@ -5,7 +5,7 @@ Framework: SpringBoot
 
 ---
 
-NiTest
+Todo API
 =========
 
 RESTFul API Create/Update and Delete for todo. It's including:
