@@ -12,12 +12,13 @@ RESTFul API Create/Update and Delete for todo. It's including:
 
  - id : Todo id
  - subject : Subject of todo
- - content : The detail of todo
+ - detail : The detail of todo
  - status : Status of todo. We prefer 2 statuses (Done and Pending)
 
 Database setup
 --------------------------------
 This API we are using MySQL as database and also liquibase are helping for creating a table.
+
 Run this command for creating database:
 
 ```create database todo character set utf8;```
@@ -30,25 +31,24 @@ Architecture Setup
 - maven (require version 3)
 - git
 
-**Clone project from repository**
-`git clone git@github.com:supannikar/nitest.git`
+**Step for running proiect **
 
-**Build project**
-`mvn clean install`
+1. Clone project from repository: git clone git@github.com:supannikar/nitest.git
 
-**Run project**
-`mvn spring-boot:run`
+2.Build project: mvn clean install
+
+3Run project: mvn spring-boot:run
 
 The API will be run on port 8090: http://localhost:8090/api/nitest/v1/todos
 And also we've implement RestFul API documentation. It will be run on this link: http://localhost:8090/api/nitest/v1/docs
 
 Description about API documentation
 --------------------------------
-**Create new todo**
+- Create new todo
 
-POST: http://localhost:8090/api/nitest/v1/todos
+```POST: http://localhost:8090/api/nitest/v1/todos```
 
-Json Request Body will provide seem like this:
+Request Body will provide seem like this:
 ```json
 {
     "id":null,
@@ -58,17 +58,17 @@ Json Request Body will provide seem like this:
 }
 ```
 
-**Get all list**
+- Get all list
 
-GET: http://localhost:8090/api/nitest/v1/todos
+```GET: http://localhost:8090/api/nitest/v1/todos```
 
-**Get todo by id**
+- Get todo by id
 
-GET: http://localhost:8090/api/nitest/v1/todos/{id}
+```GET: http://localhost:8090/api/nitest/v1/todos/{id}```
 
-**Update existing todo by id**
+- Update existing todo by id
 
-PUT: http://localhost:8090/api/nitest/v1/todos/{id}
+```PUT: http://localhost:8090/api/nitest/v1/todos/{id}```
 
 JSON Request Body will provide same as create nw todo:
 ```json
@@ -80,7 +80,7 @@ JSON Request Body will provide same as create nw todo:
 }
 ```
 
-**Delete todo by id**
+- Delete todo by id
 
-DELETE: http://localhost:8090/api/nitest/v1/todos/{id}
+```DELETE: http://localhost:8090/api/nitest/v1/todos/{id}```
 
