@@ -1,1 +1,86 @@
-# nitest
+---
+Developer: Supannikar Nontarak
+Stack: Java
+Framework: SpringBoot
+
+---
+
+NiTest
+=========
+
+RESTFul API Create/Update and Delete for todo. It's including:
+
+ - id : Todo id
+ - subject : Subject of todo
+ - content : The detail of todo
+ - status : Status of todo. We prefer 2 statuses (Done and Pending)
+
+Database setup
+--------------------------------
+This API we are using MySQL as database and also liquibase are helping for creating a table.
+Run this command for creating database:
+
+```create database todo character set utf8;```
+
+----------
+Architecture Setup
+--------------------------------
+**Prerequisite**
+- java (require JDK version 8)
+- maven (require version 3)
+- git
+
+**Clone project from repository**
+`git clone git@github.com:supannikar/nitest.git`
+
+**Build project**
+`mvn clean install`
+
+**Run project**
+`mvn spring-boot:run`
+
+The API will be run on port 8090: http://localhost:8090/api/nitest/v1/todos
+And also we've implement RestFul API documentation. It will be run on this link: http://localhost:8090/api/nitest/v1/docs
+
+Description about API documentation
+--------------------------------
+**Create new todo**
+
+POST: http://localhost:8090/api/nitest/v1/todos
+
+Json Request Body will provide seem like this:
+```json
+{
+    "id":null,
+    "subject":"subject of todo",
+    "detail":"detail of todo",
+    "status":"Pending"
+}
+```
+
+**Get all list**
+
+GET: http://localhost:8090/api/nitest/v1/todos
+
+**Get todo by id**
+
+GET: http://localhost:8090/api/nitest/v1/todos/{id}
+
+**Update existing todo by id**
+
+PUT: http://localhost:8090/api/nitest/v1/todos/{id}
+
+JSON Request Body will provide same as create nw todo:
+```json
+{
+    "id":1,
+    "subject":"subject of todo",
+    "detail":"detail of todo",
+    "status":"Pending"
+}
+```
+
+**Delete todo by id**
+
+DELETE: http://localhost:8090/api/nitest/v1/todos/{id}
+
