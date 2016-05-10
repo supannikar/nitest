@@ -31,7 +31,7 @@ Architecture Setup
 - maven (require version 3)
 - git
 
-**Step for running proiect**
+**Step for running project**
 
 1. Clone project from repository: git clone git@github.com:supannikar/nitest.git
 
