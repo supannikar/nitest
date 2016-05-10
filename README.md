@@ -31,13 +31,13 @@ Architecture Setup
 - maven (require version 3)
 - git
 
-**Step for running proiect **
+**Step for running proiect**
 
 1. Clone project from repository: git clone git@github.com:supannikar/nitest.git
 
-2.Build project: mvn clean install
+2. Build project: mvn clean install
 
-3Run project: mvn spring-boot:run
+3. Run project: mvn spring-boot:run
 
 The API will be run on port 8090: http://localhost:8090/api/nitest/v1/todos
 And also we've implement RestFul API documentation. It will be run on this link: http://localhost:8090/api/nitest/v1/docs
