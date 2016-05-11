@@ -22,6 +22,9 @@ This API we are using MySQL as database and also liquibase are helping for creat
 Run this command for creating database:
 
 ```create database todo character set utf8;```
+```grant all privileges on todo.* to todo identified by 'password';```
+```grant all privileges on todo.* to todo@'localhost' identified by 'password';```
+```FLUSH PRIVILEGES;```
 
 ----------
 Architecture Setup
@@ -38,6 +41,10 @@ Architecture Setup
 2. Build project: mvn clean install
 
 3. Run project: mvn spring-boot:run
+
+**Step for running with jar file**
+
+1. java -jar target/nitest-0.0.1-SNAPSHOT.jar
 
 The API will be run on port 8090: http://localhost:8090/api/nitest/v1/todos
 And also we've implement RestFul API documentation. It will be run on this link: http://localhost:8090/api/nitest/v1/docs
