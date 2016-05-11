@@ -22,8 +22,11 @@ This API we are using MySQL as database and also liquibase are helping for creat
 Run this command for creating database:
 
 ```create database todo character set utf8;```
+
 ```grant all privileges on todo.* to todo identified by 'password';```
+
 ```grant all privileges on todo.* to todo@'localhost' identified by 'password';```
+
 ```FLUSH PRIVILEGES;```
 
 ----------
